@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big_Bros_Login_Page</title>
+  
+  <!-- All Links -->
+    <link rel="stylesheet" href="./login.css">
+    <script src="./login.js" defer></script>
+    <link rel="icon" href="./all images/Big-Bros-Logo-removebg-preview.png">
+
+    <!-- external links -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <script src="https://kit.fontawesome.com/4fe944c68b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Menu Icon -->
+  <div class="menuIcon">
+    <a href="#">
+      <i class="fa-solid fa-bars"></i>
+    </a>
+  </div>
+  <!-- end -->
+
+  <!-- Loginsection -->
+  <div class="loginSection">
+    <h3>Register new student</h3>
+    <!-- login part -->
+    <form id="userForm">
+
+      <div class="form-grid">
+      <!-- User Name -->
+      <div class="loginPart">
+        <label for="userName">Full names:</label> 
+        <input type="text" placeholder="e.g. Kwizera David" id="userName" class="userName" required>
+      </div>
+      <!-- end User Name -->
+
+      <!-- Birth Date --> <!--ADDED-->
+        <div class="loginPart">
+          <label for="userBirthDate">Birth date:</label>
+          <input type="date" id="userBirthDate" required>
+        </div>
+      <!-- End Birth Date -->
+
+      <!-- Gender --><!--ADDED-->
+        <div class="loginPart">
+          <label for="userGender">Gender:</label>
+          <select id="userGender" required>
+            <option value="" disabled selected>Choose gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+      <!-- End -->
+
+      <!-- Nationality --><!--ADDED-->
+        <div class="loginPart">
+          <label for="userNationality">Nationality:</label>
+          <input type="text" placeholder="e.g. Rwandan" id="userNationality" required>
+        </div>
+      <!--End-->
+
+      <!-- Official Address --><!--ADDED-->
+        <div class="loginPart">
+          <label for="userOfficialAddress">Official Address:</label>
+          <input type="text" placeholder="e.g. Province, District, Cell..." id="userOfficialAddress" required>
+        </div>
+      <!--End-->
+
+      <!-- Current Address --><!--ADDED-->
+        <div class="loginPart">
+          <label for="userCurrentAddress">Current Address:</label>
+          <input type="text" placeholder="e.g. Province, District, Cell..." id="userCurrentAddress" required>
+        </div>
+      <!-- End -->
+
+      <!-- Grade --><!--ADDED-->
+        <div class="loginPart">
+          <label for="userGrade">Grades/Class:</label>
+          <select id="userGrade" required>
+            <option value="" disabled selected>Select Grade</option>
+            <option value="Primary 1">Primary 1</option>
+            <option value="Primary 2">Primary 2</option>
+            <option value="Primary 3">Primary 3</option>
+            <option value="Primary 4">Primary 4</option>
+            <option value="Primary 5">Primary 5</option>
+            <option value="Primary 6">Primary 6</option>
+          </select>
+        </div>
+      <!-- End -->
+
+      <!-- Academic Year --><!--ADDED-->
+        <div class="loginPart">
+          <label for="userAcademicYear">Academic year:</label>
+          <input type="text" placeholder="e.g. 2024-2025" id="userAcademicYear" required>
+        </div>
+      <!-- End -->
+
+      <!-- Term --><!--ADDED-->
+        <div class="loginPart">
+          <label for="userTerm">Term:</label>
+          <select id="userTerm" required>
+            <option value="" disabled selected>Choose term</option>
+            <option value="Term 1">Term 1</option>
+            <option value="Term 2">Term 2</option>
+            <option value="Term 3">Term 3</option>
+          </select>
+        </div>
+      <!-- End -->
+
+      <!-- Favourite Games --><!--ADDED-->
+        <div class="loginPart">
+          <label for="userGames">Favourite games:</label>
+          <input type="text" placeholder="e.g. Football" id="userGames" required>
+        </div>
+      <!-- End -->
+
+      <!-- Religion --><!--ADDED-->
+        <div class="loginPart">
+          <label for="userReligion">Religion:</label>
+          <input type="text" placeholder="e.g. Christian" id="userReligion" required>
+        </div>
+      <!-- End -->
+
+      <!-- Father's Name --><!--ADDED-->
+        <div class="loginPart">
+          <label for="userFatherName">Father's name:</label>
+          <input type="text" placeholder="e.g. John Doe" id="userFatherName" required>
+        </div>
+      <!-- End -->
+
+      <!-- Father's Number --><!--ADDED-->
+        <div class="loginPart">
+          <label for="userFatherNumber">Father's number:</label>
+          <input type="tel" placeholder="e.g. 078xxxxxxx" id="userFatherNumber" required>
+        </div>
+      <!-- End -->
+
+      <!-- Mother's Name --><!--ADDED-->
+        <div class="loginPart">
+          <label for="userMotherName">Mother's name:</label>
+          <input type="text" placeholder="e.g. Jane Doe" id="userMotherName" required>
+        </div>
+      <!-- End -->
+
+      <!-- Mother's Number --><!--ADDED-->
+        <div class="loginPart">
+          <label for="userMotherNumber">Mother's number:</label>
+          <input type="tel" placeholder="e.g. 078xxxxxxx" id="userMotherNumber" required>
+        </div>
+        <!-- End -->
+      </div>
+
+      <!-- Submit & Reset btn -->
+      
+      <input type="submit" class="submitBtn">
+      <input type="reset" class="resetBtn">
+      <!-- end Submit & Reset btn -->
+    </form>
+    <!-- end login part -->
+    
+  </div>
+  <!-- end Loginsection -->
+  
+</body>
+
+</html>

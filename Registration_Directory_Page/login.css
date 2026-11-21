@@ -1,0 +1,271 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins_regular', sans-serif;
+  font-size: 18px;
+}
+
+body{
+  min-height: 100vh;
+  background-color: #f4fafc;
+  /* ✅ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+:root{
+  --darkblue1: #0E2931;
+  --blue: #12484c;
+  --light_blue:#2B757a;
+  --dark_red: #861211;
+  --dark_white: #E2E2E0;
+  --light_white: #fff;
+}
+
+@font-face {
+  font-family: poppins_bold;
+  src: url(../Fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: poppins_light;
+  src: url(../Fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: poppins_regular;
+  src: url(../Fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: poppins_semibold;
+  src: url(../Fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: poppins_thin;
+  src: url(../Fonts/Poppins-Thin.ttf);
+}
+
+.menuIcon{
+  margin: 20px;
+  align-self: flex-start;
+}
+
+.menuIcon i{
+  font-size: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--darkblue1);
+  transition: 0.3s;
+}
+
+.menuIcon i:active{
+  position: relative;
+  top: 1px;
+}
+
+.loginSection, .tableSection{
+  background-color: #861211;
+  width: 80vw;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  border: 1px solid var(--dark_white);
+  border-radius: 5px;
+  box-shadow: -2px 0px 20px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: -2px 0px 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* ✅ CHANGED: Make the table container scrollable on small screens */
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto; /* Adds a horizontal scrollbar if the table is too wide */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  min-width: 0; /* CRITICAL: Allows flexbox child to shrink properly */
+}
+
+.loginSection h3, .tableSection h3{
+  color: var(--light_white);
+}
+
+.loginSection form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loginSection form .loginPart{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.loginSection form .loginPart label{
+  color: var(--dark_white);
+}
+
+.loginSection form .loginPart input{
+  padding: 4px;
+  border-radius: 3px;
+  border: none;
+}
+
+.loginSection form .submitBtn{
+  cursor: pointer;
+  padding: 8px;
+  background-color: var(--blue);
+  border: none;
+  color: var(--light_white);
+  border-radius: 3px;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: 0.2s;
+}
+
+.loginSection form .submitBtn:hover{
+  background-color:#1a5a5f;
+}
+
+.loginSection form .submitBtn:active{
+  position: relative;
+  top: 1px;
+}
+
+.loginSection form .resetBtn{
+  cursor: pointer;
+  padding: 8px;
+  background-color: var(--blue);
+  border: none;
+  color: var(--light_white);
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.loginSection form .resetBtn:hover{
+  background-color:#1a5a5f;
+}
+
+.loginSection form .resetBtn:active{
+  position: relative;
+  top: 1px;
+}
+
+
+/* All Table Directory Styles */
+.tableSection h3{
+  text-align: center;
+}
+
+.tableSection table{
+  background-color: var(--light_blue);
+  color: var(--light_white);
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 500px;
+  border: 1px solid var(--dark_white);
+  table-layout: auto; /* Lets the browser size the columns based on content */
+}
+
+.tableSection table thead tr th{
+  padding: 10px;
+  border: 1px solid var(--dark_white);
+}
+
+.tableSection table tbody tr td{
+  padding: 12px 10px;
+  border: 1px solid var(--dark_white);
+}
+
+.tableSection table tbody tr:hover{
+  background-color: #256b70;
+}
+
+@media (max-width: 600px) {
+  .loginSection, .tableSection {
+    width: 90vw; /* The red box takes up more screen space on mobile */
+    padding: 15px; /* Slightly less padding */
+  }
+  
+  /* Optional: Make the font slightly smaller on mobile so it fits better */
+  * {
+    font-size: 16px;
+  }
+}
+
+/* ✅ CHANGED: Styles for the Delete button */
+.tableSection table tbody tr td .deleteBtn {
+  background-color: var(--dark_red);
+  color: var(--light_white);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-self: center;
+  justify-self:center;
+  transition: 0.2s;
+}
+
+.tableSection table tbody tr td .deleteBtn:hover {
+  background-color: #a31816; /* Slightly lighter red on hover */
+}
+
+.tableSection table tbody tr td .deleteBtn:active {
+  position: relative;
+  top: 1px;
+}
+
+
+/* ✅ CHANGED: New Grid Layout for the bigger form */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  column-gap: 30px;
+}
+
+/* ✅ CHANGED: Select and Date inputs need the same styling as text inputs */
+.loginSection form .loginPart input,
+.loginSection form .loginPart select {
+  padding: 6px;
+  border-radius: 3px;
+  border: none;
+  font-family: 'poppins_regular', sans-serif;
+  width: 100%;
+}
+
+/* ✅ CHANGED: Make it single column on mobile screens */
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr; /* Stacks the inputs on phones */
+    gap: 10px;
+  }
+}
+
+/* ✅ NEW: Styles for the View button */
+.tableSection table tbody tr td .viewBtn {
+  background-color: var(--blue);
+  color: var(--light_white);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.tableSection table tbody tr td .viewBtn:hover {
+  background-color: #1a5a5f;
+}
+
+.tableSection table tbody tr td .viewBtn:active {
+  position: relative;
+  top: 1px;
+}
